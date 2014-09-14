@@ -24,6 +24,13 @@ pages:
  - ['adapters/overview.md', 'Adapters', 'Overview']
  - ['adapters/suave.md', 'Adapters', 'Suave']
  - ['adapters/topshelf.md', 'Adapters', 'Topshelf']
+ - ['advanced/overview.md', 'Advanced', 'Overview']
+ - ['advanced/v2-refactor.md', 'Advanced', 'v2.0-refactor']
+ - ['advanced/reservoirs.md', 'Advanced', 'Reservoirs']
+ - ['advanced/writing-a-target.md', 'Advanced', 'Writing a Target']
+ - ['advanced/writing-a-metric.md', 'Advanced', 'Writing a Metric']
+ - ['advanced/thinking-about-time.md', 'Advanced', 'Thinking About Time']
+ - ['advanced/contributing.md', 'Advanced', 'Contributing']
  - ['about.md', 'About']
 
 extra_css:

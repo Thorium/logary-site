@@ -1,63 +1,56 @@
-# Sine dum
+# Logstash - Logary Target
 
-## Qui mea dubitare dentibus lacrimae caute
+Logstash is a log router that is highly capable of funneling the events further.
+When using logary, you should understand that the point of logging libraries is
+getting the logs off the node and into a stable storage where they can be
+searched and analysed as quick as possible.
 
-Lorem markdownum iniuste retia. Inpius ferox.
+![Logstash](https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png)
 
-1. Opus ter
-2. Diva Aegides indignatur lavere nunc inmane
-3. Ortum castris sponte totidemque fallere
-4. Quo amor adquirit finis nuper versus vacat
-5. Simili verum
-6. Inque subdita
+This target sends logs to logstash using a TCP socket, meaning there's not that
+much to set up to get started. This means that once in a blue moon you'll
+lose log lines - but often this is not a big issue, because you don't take
+application business logic decisions on log lines.
 
-Color eam: desierant iamque fraterna parta. Umquam data fugis axis alta convicia
-septem vitae in facinus.
+## API
 
-## Procul violenta beatus
+``` fsharp
+open System
 
-Etiamnum habent lilia quamvis vox triceps distamus. Grates cursus, et precibus
-recenti forcipe. Laudata mihi minimum praebebatque facit me Thoactes tumulum
-**fraternis fretum giganteis** ad animos anguicomae Quirini misit felicesque.
-Epulas iamque; omnes laude sola flumineae. Non una nihil cernes lacrimae vellem
-oculisque postquam pati.
+open Logary
+open Logary.Configuration
+open Logary.Targets
 
-    thermistorSpywareSpooling.matrixSeo -= userDigital.boot_standalone_pdf(
-            token_source_wave - onlineSataPpi + opengl, 3);
-    link(322370 / megabit);
-    var stickWww = network(access_queue_file, workstation_joystick_deprecated -
-            pretest, storage) + filePdfJquery * -1;
-    if (-3 != adware_cursor) {
-        rwThermistorPiconet = ppgaCaps.internetBank(visual);
-    } else {
-        ccd_soap_dlc = newline(bar.snippet_boot_offline(runtime_compact_saas));
-        cycle = microcomputer_ray_netmask(263550, ppiVeronicaMask, 47);
-    }
-    if (iscsi(-5, tape_page.clob_vpi.baud_crossplatform_cd(cdma, ddl), 31) <=
-            55) {
-        infotainment -= symbolic;
-        gammaGooglePetabyte *= wireless;
-        outbox.paperRawToken += unitWindowsVpi;
-    }
+[<EntryPoint>]
+let main argv =
+  use logary =
+    withLogary' "Riemann.Example" (
+      withTargets [
+        Logstash.create (Logstash.LogstashConf.Create("logstash.prod.corp.tld",
+1939us)) "logstash"
+      ] >>
+      withRules [
+        Rule.createForTarget "logstash"
+      ]
+    )
 
-Et omine, sanctasque non deus fores parvum orbes nunc, bracchia faciemque rumor.
-Sequentem Graecia promittuntque sorores spernimus praedaeque illud, si boum?
+  Console.ReadKey true |> ignore
+  0
 
-    if (tokenRup) {
-        sectorBluetooth.memoryExabyteSignature += 1;
-        panel.toggleWebmailBarcraft.tweenWrap(
-                wais_regular_ethernet.phreakingBezel(panelCold), basic,
-                parityDimm);
-    }
-    if (on != sql_site(keyboardWanSidebar)) {
-        systrayRdf.dimmVertical.userFormatFirewall(friendly.gigo(viral_terminal,
-                cps_server, pim_bluetooth_hardening));
-        text(operatingClickCommand(tooltip, megabit_exploit_torrent, layout));
-        copy_half.dns_browser += wpaToslink + floating_programming;
-    }
-    definitionXhtml(dma);
-    pasteIo = binaryEthicsUnicode;
+```
 
-**Rivus annorum** est, et altus Phineus proiecto eandem, deseruit vulnera
-virens? Troica suo almus a ignibus sperata mortalibus tenetur, fama glandiferam
-suis gemitus, et ulla in transit certa.
+## Logstash config
+
+Logstash can only take 'json' codec from things that do proper framing, such as
+message brokers.
+
+```
+input {
+  tcp {
+    codec => json_lines { charset => "UTF-8" }
+    host  => "0.0.0.0"
+    port  => 1939
+    type  => "apps"
+  }
+}
+```

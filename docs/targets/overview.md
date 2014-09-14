@@ -1,47 +1,43 @@
 # Targets Overview
 
+These are the targets supported by Logary. If you write a target, then send a PR
+towards this documentation and everyone can enjoy using it!
 
-#### Target: Logary.TextWriter *builtin*
+## TextWriter
 
-**For LogLines**
+**For LogLines | builtin**
 
 Write to any text writer - such as one from `System.IO.File.OpenWrite`.
-
-**Part of the core assembly:**
 
 ``` powershell
 Install-Package Intelliplan.Logary -Pre
 ```
 
-#### Target: Logary.Console *builtin*
+## Console
 
-**For LogLines**
+**For LogLines | builtin**
 
 Writes output messages to `System.Console.Out` and Error, and Fatal LogLines
 to `System.Console.Error`.
 
-**Part of the core assembly:**
-
 ``` powershell
 Install-Package Intelliplan.Logary -Pre
 ```
 
-#### Target: Logary.Debugger *builtin*
+## Debugger
 
-**For LogLines**
+**For LogLines | builtin**
 
 Writes all output to the Debugger-console of Visual Studio, Xamarin Studio or
 MonoDevelop.
 
-**Part of the core assembly:**
-
 ``` powershell
 Install-Package Intelliplan.Logary -Pre
 ```
 
-#### Target: Logary.Logstash *builtin*
+## Logstash
 
-**For LogLines**
+**For LogLines | builtin**
 
 This is the most mature target that we use the most at Intelliplan. Logstash is
 a log router that can move your logs to the best location available.
@@ -49,17 +45,15 @@ a log router that can move your logs to the best location available.
 > **Manage events and logs**. Elasticsearch works seamlessly with Logstash to
 > collect, parse, index, and search logs
 
-**Part of the core assembly:**
-
 ``` powershell
 Install-Package Intelliplan.Logary -Pre
 ```
 
 ![Logstash](https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png)
 
-#### Target: Logary.Graphite *builtin*
+## Graphite
 
-**For Measures**
+**For Measures | builtin**
 
 The [graphite](http://graphite.wikidot.com/faq) target is a mature target for
 sending Measures from your application.
@@ -77,15 +71,13 @@ Best used in conjunction with [Grafana](http://grafana.org/) (a web front-end):
 > InfluxDB & OpenTSDB. Rich graphing: Fast and flexible client side graphs with
 > a multitude of options.
 
-![Grafana](https://raw.githubusercontent.com/logary/logary-assets/master/targets/grafana.png)
-
-**Part of the core assembly:**
-
 ``` powershell
 Install-Package Intelliplan.Logary -Pre
 ```
 
-#### Target: Logary.ElmahIO
+![Grafana](https://raw.githubusercontent.com/logary/logary-assets/master/targets/grafana.png)
+
+## Elmah.IO
 
 **For LogLines**
 
@@ -101,7 +93,7 @@ Install-Package Intelliplan.Logary.ElmahIO -Pre
 
 ![Elmah.IO](https://raw.githubusercontent.com/logary/logary-assets/master/targets/elmahio.png)
 
-#### Target: Logary.Logentries
+## Logentries
 
 **For LogLines and Measures**
 
@@ -116,7 +108,7 @@ All logging to Logentries is encrypted.
 
 ![Logentries](https://raw.githubusercontent.com/logary/logary-assets/master/targets/logentries.png)
 
-#### Target: Logary.Loggr
+## Loggr
 
 **For LogLines**
 
@@ -130,7 +122,7 @@ Install-Package Intelliplan.Logary.Loggr -Pre
 
 ![Loggr](https://raw.githubusercontent.com/logary/logary-assets/master/targets/loggr.png)
 
-#### Target: Logary.Riemann
+## Riemann
 
 **For Measures**
 
@@ -156,7 +148,7 @@ client](https://github.com/logary/logary/blob/feature/protobuf-riemann/src/Logar
 for Riemann, to make it stable and to make it fit well with Logary's
 actor-based approach. More usage examples on this will follow.
 
-#### Target: Logary.DB
+## DB
 
 **For LogLines and Measures**
 
@@ -171,9 +163,9 @@ Install-Package Intelliplan.Logary.DB -Pre
 Install-Package Intelliplan.Logary.DB.Migrations -Pre
 ```
 
-#### Target: Logary.Nimrod *builtin*
+## Nimrod
 
-**For LogLines and Measures**
+**For LogLines and Measures | builtin**
 
 Nimrod is a metrics server based on log processing - as such it can handle both
 LogLines and Measures.
@@ -189,7 +181,7 @@ Install-Package Intelliplan.Logary -Pre
 
 ![Nimrod](https://raw.githubusercontent.com/logary/logary-assets/master/targets/nimrod.png)
 
-#### Target: Logary.Dash
+## Dash
 
 Work in progress - aims to provide the same dashboard as Metrics.Net, allowing
 you runtime insight into your programs.
@@ -200,7 +192,7 @@ Install-Package Intelliplan.Logary.Dash -Pre
 
 The dashboard uses the awesome F# web server [suave.io](http://suave.io/).
 
-#### Target: Logary.Zipkin
+## Zipkin
 
 **For LogLines - and adds Spans**
 
@@ -219,3 +211,4 @@ Install-Package Intelliplan.Logary.Zipkin -Pre
 ```
 
 ![Zipkin](https://raw.githubusercontent.com/logary/logary-assets/master/targets/zipkin.png)
+
