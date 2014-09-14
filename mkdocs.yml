@@ -24,6 +24,7 @@ pages:
  - ['adapters/overview.md', 'Adapters', 'Overview']
  - ['adapters/suave.md', 'Adapters', 'Suave']
  - ['adapters/topshelf.md', 'Adapters', 'Topshelf']
+ - ['adapters/log4net.md', 'Adapters', 'log4net']
  - ['advanced/overview.md', 'Advanced', 'Overview']
  - ['advanced/v2-refactor.md', 'Advanced', 'v2.0-refactor']
  - ['advanced/reservoirs.md', 'Advanced', 'Reservoirs']
