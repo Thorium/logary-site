@@ -27,4 +27,10 @@ programming in F# with only a single field 'global state' to facilitate logging
 with initialise-once static readonly fields. It never throws runtime exceptions
 if the configuration validates and never blocks the call-site.
 
+## License
+
+[Apache 2.0][apache]
+
+ [apache]: https://www.apache.org/licenses/LICENSE-2.0.html
+
 
