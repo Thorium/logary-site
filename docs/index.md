@@ -8,8 +8,7 @@ Follow Logary at twitter: [@logarylib](https://twitter.com/logarylib)
 Chat and support and get support:
 [![Gitter chat](https://badges.gitter.im/logary.png)](https://gitter.im/logary/logary)
 
-If you like the code, buy me a beer!
-[![Flattr this](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=haf&url=https%3A%2F%2Fgithub.com%2Flogary%2Flogary)
+[If you like the code, buy me a beer!](https://flattr.com/submit/auto?user_id=haf&url=https%3A%2F%2Fgithub.com%2Flogary%2Flogary)
 
 Logary v2.0 aims to be compatible with the latest Mono and .Net 4.0. It is
 compiled with open source F# 3.0. [Logary is continously built on
