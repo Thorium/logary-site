@@ -1,0 +1,6 @@
+[submodule "site"]
+	path = site
+	url = git@github.com:logary/logary.github.io.git
+[submodule "vendor/mkdocs"]
+	path = vendor/mkdocs
+	url = https://github.com/tomchristie/mkdocs.git

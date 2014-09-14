@@ -1,0 +1,38 @@
+site_name: Logary
+site_url: https://logary.github.io/
+repo_url: https://github.com/logary/logary/
+site_author: Henrik Feldt
+theme_dir: themes/flatly
+
+pages:
+ - ['index.md', 'Home']
+ - ['api.md', 'API']
+ - ['targets/overview.md', 'Targets', 'Overview']
+ - ['targets/textwriter.md', 'Targets', 'TextWriter']
+ - ['targets/console.md', 'Targets', 'Console']
+ - ['targets/file.md', 'Targets', 'Console']
+ - ['targets/logstash.md', 'Targets', 'Logstash']
+ - ['targets/graphite.md', 'Targets', 'Graphite']
+ - ['targets/elmahio.md', 'Targets', 'ElmahIO']
+ - ['targets/logentries.md', 'Targets', 'Logentries']
+ - ['targets/loggr.md', 'Targets', 'Loggr']
+ - ['targets/riemann.md', 'Targets', 'Riemann']
+ - ['targets/db.md', 'Targets', 'DB']
+ - ['targets/nimrod.md', 'Targets', 'Nimrod']
+ - ['targets/dash.md', 'Targets', 'Dash']
+ - ['targets/zipkin.md', 'Targets', 'Zipkin']
+ - ['adapters/overview.md', 'Adapters', 'Overview']
+ - ['adapters/suave.md', 'Adapters', 'Suave']
+ - ['adapters/topshelf.md', 'Adapters', 'Topshelf']
+ - ['about.md', 'About']
+
+extra_css:
+  - css/fixes.css
+
+site_description: >
+  Logary is the best logging framework for .Net. It's a high performance,
+  multi-target logging, metric and health-check library for mono and .Net. Targets
+  include: textwriter, console, debugger, nlog, zipkin, nimrod, riemann, logstash,
+  sqlite, sql server, graphite, loggr, elmah.io, logentries. Adapters for: suave,
+  topshelf.
+
