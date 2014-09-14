@@ -31,7 +31,10 @@ if the configuration validates and never blocks the call-site.
 
 Have a look at the [overview of the targets](targets/overview.md), to get an
 idea about what you can log to! You can read up on the [thinking behind
-logary](about.md).
+logary](about.md). You can also [watch a presentation in
+Swedish](https://agilasverige.solidtango.com/video/2014-06-05-agila-sverige-tor-07-henrik-feldt?query=semantis)
+about how
+business should log semantically and not just dump it all into a text file!
 
 ## License
 
