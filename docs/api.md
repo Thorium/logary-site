@@ -36,7 +36,7 @@ let main argv =
   0
 ```
 
-## API: C#/VB façade
+## C# & VB façade
 
 This facade is useful when you're using C# 
 
@@ -142,9 +142,9 @@ warning-levels of `LogLevel`.
 Metrics: This is currently fairly well-working - have a look at the SQLHealthService for
 an example of a Probe.
 
-
 # Refactor notes: Logary notes impl metrics
-Moving towards a dashboard inside the service at hand.
+
+Moving towards a dashboard with full metrics, health check and log line support.
 
 ## Step one - primitives
 
