@@ -18,7 +18,7 @@ let main argv =
     withLogary' "Riemann.Example" (
       withTargets [
         Riemann.create (Riemann.RiemannConf.Create(tags = ["riemann-health"])) "riemann"
-        Console.create (Console.ConsoleConf.Default) "console"
+        Console.create Console.empty "console"
       ] >>
       withMetrics (Duration.FromMilliseconds 5000L) [
         WinPerfCounters.create (WinPerfCounters.Common.cpuTime) "cpuTime" (Duration.FromMilliseconds 500L)
@@ -35,6 +35,36 @@ let main argv =
   Console.ReadKey true |> ignore
   0
 ```
+
+Now you can get a logger through the `Logging` module:
+
+**F#**
+
+``` fsharp
+let logger = Logging.getCurrentLogger ()
+let another = Logging.getLoggerByName "Corp.App.Svc"
+```
+
+or in **C#**
+``` csharp
+namespace A {
+  class X {
+    static readonly Logger _logger = Logging.GetCurrentLogger();
+    void XX () {
+      _logger.Info("hello world");
+    }
+  }
+}
+```
+
+The Logger module will automatically discover the current
+call-site/function/module/class.and use its hierarchy to create a new logger.
+The idea is that you can use Rule.hiera regexpes to selectively enable or
+disable loggers, just like you can in NLog and log4net.
+
+The static logger is automatically wired up to the framework the instant that
+you run the `withLogary'` or `runWithGoodDefaults` from the
+`Logary.Configuration` namespace (in which you find the `Config` module).
 
 ## HealthChecks, Metrics, Probes
 
