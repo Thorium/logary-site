@@ -28,7 +28,7 @@ let main argv =
         Rule.createForTarget "console"
       ] >>
       withInternalTargets Info [
-        Console.create (Console.ConsoleConf.Default) "console"
+        Console.create (Console.empty) "console"
       ]
     )
 
