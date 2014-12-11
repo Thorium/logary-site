@@ -39,7 +39,7 @@ Install-Package Intelliplan.Logary
 
 **For LogLines | builtin**
 
-This is the most mature target that we use the most at Intelliplan. Logstash is
+Logstash is
 a log router that can move your logs to the best location available.
 
 > **Manage events and logs**. Elasticsearch works seamlessly with Logstash to

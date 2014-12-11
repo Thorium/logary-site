@@ -121,8 +121,7 @@ For example, if you have a continuous deployment pipeline set up, you may want
 to send events to Riemann any time you have an exception, let Riemann calculate
 the exception rate as a baseline and then compare that baseline to the exception
 rate of a newly deployed version; rolling the deploy back if the exception rate
-goes outside of, say, two standard deviations of the baseline. At least, this is
-what we're using Riemann for at Intelliplan.
+goes outside of, say, two standard deviations of the baseline.
 
 That's three targets and counting. To help those of you who still want log
 output on your dev machine (who doesn't?), there are also TextWriter targets for
