@@ -23,7 +23,7 @@ use logary =  ...
 
 let conn =
   ConnectionSettings.configureStart()
-  |> ConnectionSettings.useCustomLogger (LogaryLogger((!lm).Value.GetLogger("EventStore")))
+  |> ConnectionSettings.useCustomLogger (LogaryLogger(logary.GetLogger("EventStore")))
   |> ConnectionSettings.configureEnd (IPEndPoint(IPAddress.Loopback, 1113))
 ```
 
