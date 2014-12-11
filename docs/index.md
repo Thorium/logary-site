@@ -35,6 +35,14 @@ Swedish][agilasv]
 about how
 business should log semantically and not just dump it all into a text file!
 
+## Release Notes
+
+### v2.0.2
+
+ - Support CommonLogging fully
+ - New `Logary.Adapters.EventStore`
+ - New function `LogLine.createf`
+
 ## License
 
 [Apache 2.0][apache]
