@@ -15,7 +15,7 @@ compiled with open source F# 3.0. [Logary is continously built on
 CentOS](https://tc-oss.intelliplan.net/project.html?projectId=Logary&tab=projectOverview).
 
 ``` powershell
-Install-Package Intelliplan.Logary -Pre
+Install-Package Intelliplan.Logary
 ```
 
 ## Why?
@@ -31,7 +31,7 @@ if the configuration validates and never blocks the call-site.
 Have a look at the [overview of the targets](targets/overview.md), to get an
 idea about what you can log to! You can read up on the [thinking behind
 logary](about.md). You can also [watch a presentation in
-Swedish](https://agilasverige.solidtango.com/video/2014-06-05-agila-sverige-tor-07-henrik-feldt?query=semantis)
+Swedish][agilasv]
 about how
 business should log semantically and not just dump it all into a text file!
 
@@ -40,5 +40,4 @@ business should log semantically and not just dump it all into a text file!
 [Apache 2.0][apache]
 
  [apache]: https://www.apache.org/licenses/LICENSE-2.0.html
-
-
+ [agilasv]: https://agilasverige.solidtango.com/video/2014-06-05-agila-sverige-tor-07-henrik-feldt?query=semantis

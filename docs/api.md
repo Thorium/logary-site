@@ -80,7 +80,7 @@ an example of a Probe.
 This facade is useful when you're using C# 
 
 ``` powershell
-Install-Package Intelliplan.Logary.CSharp -Pre
+Install-Package Intelliplan.Logary.CSharp
 ```
 
 It adds extension methods to the `Logary` namespace. Just import the namespace
