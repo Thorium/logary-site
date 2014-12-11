@@ -31,9 +31,10 @@ open EventStore.ClientAPI.Common.Log
 
 use logary =  ...
 
-Conn.configureStart()
-|> fun settings -> settings.UseCustomLogger(LogaryLogger(logary.GetLogger("EventStore")))
-|> Conn.configureEnd (IPEndPoint(IPAddress.Loopback, 1113))
+let conn =
+  ConnectionSettings.configureStart()
+  |> ConnectionSettings.useCustomLogger (LogaryLogger(logary.GetLogger("EventStore")))
+  |> ConnectionSettings.configureEnd (IPEndPoint(IPAddress.Loopback, 1113))
 ```
 
 Also see [configuring
