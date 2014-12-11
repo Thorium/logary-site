@@ -22,6 +22,7 @@ pages:
  - ['targets/dash.md', 'Targets', 'Dash']
  - ['targets/zipkin.md', 'Targets', 'Zipkin']
  - ['adapters/overview.md', 'Adapters', 'Overview']
+ - ['adapters/eventstore.md', 'Adapters', 'EventStore']
  - ['adapters/suave.md', 'Adapters', 'Suave']
  - ['adapters/topshelf.md', 'Adapters', 'Topshelf']
  - ['adapters/log4net.md', 'Adapters', 'log4net']
