@@ -31,7 +31,9 @@ open EventStore.ClientAPI.Common.Log
 
 use logary =  ...
 
-LogManager.SetLoggerFactory(fun name -> LogaryAdapter(logary.GetLogger name))
+Conn.configureStart()
+|> fun settings -> settings.UseCustomLogger(LogaryLogger(logary.GetLogger("EventStore")))
+|> Conn.configureEnd (IPEndPoint(IPAddress.Loopback, 1113))
 ```
 
 Also see [configuring
