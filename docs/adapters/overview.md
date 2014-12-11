@@ -1,46 +1,48 @@
-# Plausis crines
+# Logary Adapters
 
-## Scalas se neve illum petebar amantes requirere
+Adapters are plug-ins into OTHER libraries, which can then output their internal
+logs into logary, which in turn takes care of sending those logs further.
 
-Lorem markdownum seque et unda que quam potest cornu ipse rabies. Neque ex erat
-vetuere pervia exsatiata feruntur proditione me erat poscunt quae sorores. Cum
-terraeque canibus auferat, nam peteret, selige, sua quoque pastores antiquas?
-Artus de esse fuit [vara](http://www.metafilter.com/); et datur contudit exiguo
-postquam requirit, relinquam ad colla conclamat sparsa, crimen.
+## Suave
 
-Massa pio id per perfide tellurem ait seque auribus misit gaudete nutricis frui
-infamataeque digitis in quae. Rimis Herculis deserit! Nec ac, fer corpora data
-infausto adeunt, firmamina talibus tetigere cetera, *vultu*.
+Usage:
 
-## Pulchram ferro stravit si vincere contineat subsedit
+``` fsharp
+let web_config =
+  { default_config with
+      bindings = context.settings.GetBindings ()
+      logger   = SuaveAdapter(logary.GetLogger "suave")
+  }
+```
 
-Palpitat idem spatium, cernitis sciet te *Iovi nec tamen*. Et gemitum tegemus
-truncaque priore Eurylochum At? Cum pro et ferarum vero, opertos a **in**
-medentes periture laetos letali ait Phoebus *aries* tumulus? Merumque quas
-*dedimus*, ubi iuvenum quae ore temporis manes in in vimen. Eat visa; gravidae
-illis omnemque vulnere versant patruique missos navis.
+## Topshelf
 
-- Caede ne roseo
-- Alta timens
-- Fuit Cyclopis
+Usage
 
-## Transitus nescio victrices latens flecti vestes sint
+TBD
 
-Gemellam origine petunt utque et denique incendia murmur commissaque dives,
-aduncos neu est. Loqui vana Minos rota iuvat abiit teloque tulit, at [in
-Ulixe](http://www.reddit.com/r/haskell). *Aut* tori divorum diffusum succincta
-setius, aut fuerunt tales eum cum. Duce vos modo nec reponuntur vestra videtur
-sub.
+## EventStore
 
-1. Modo torum quid sua
-2. Post si ramis cui nimium vellem furoris
-3. Discutiunt insonuit grandia triplicesque paene tundit
+Usage:
 
-Utinam et iamque nocent hominum et quis plumas ferinae propiore **cinctaeque
-ortus**; trepidare vigil ab! Sui summoque: tergumque iam, lacrimis, **aris
-nunc** mole levi fueris debita, Danaam Latonia nece! Et nubibus Atrides iniquae
-eburnae laterum quem capacis, Hister quae furca templa. Et natusque sine duabus
-Meropisque ad tamen Threiciis tectis: leaena, et.
+``` fsharp
+open EventStore.ClientAPI
+open EventStore.ClientAPI.Common.Log
 
-[in Ulixe]: http://www.reddit.com/r/haskell
-[vara]: http://www.metafilter.com/
+use logary =  ...
+
+LogManager.SetLoggerFactory(fun name -> LogaryAdapter(logary.GetLogger name))
+```
+
+Also see [configuring
+logging](docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging).
+
+## CommonLogging
+
+Please help fill out!
+
+## log4net
+
+Please help fill out!
+
+
