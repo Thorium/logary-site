@@ -5,3 +5,5 @@ cp -r site/ ../logary.github.io/
  git add .
  git commit -m 'update docs'
  git push)
+
+git push
