@@ -10,6 +10,7 @@ pages:
  - ['targets/overview.md', 'Targets', 'Overview']
  - ['targets/textwriter.md', 'Targets', 'TextWriter']
  - ['targets/console.md', 'Targets', 'Console']
+ - ['targets/debugger.md', 'Targets', 'Debugger']
  - ['targets/file.md', 'Targets', 'File']
  - ['targets/logstash.md', 'Targets', 'Logstash']
  - ['targets/graphite.md', 'Targets', 'Graphite']
