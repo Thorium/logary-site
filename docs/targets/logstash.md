@@ -1,9 +1,16 @@
 # Logstash - Logary Target
 
-Logstash is a log router that is highly capable of funneling the events further.
-When using logary, you should understand that the point of logging libraries is
-getting the logs off the node and into a stable storage where they can be
-searched and analysed as quick as possible.
+**For LogLines | builtin**
+
+Logstash is
+a log router that can move your logs to the best location available.
+
+> **Manage events and logs**. Elasticsearch works seamlessly with Logstash to
+> collect, parse, index, and search logs
+
+``` powershell
+Install-Package Intelliplan.Logary 
+```
 
 ![Logstash](https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png)
 

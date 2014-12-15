@@ -1,50 +1,25 @@
-# Origine felix inhibe locus fervoribus gaude
+# Riemann - Logary Target
 
-## Uva qua Cephaloque munus
+**For Measures**
 
-Lorem markdownum rapuit meminisse Achilles undas quantum et alta *amaverat*! Sub
-ceu inter pars, fabula Unde, **verborum Arethusa**, capiti abest nimiumque
-successibus patria nubere bene carmina **exacta**. Fulminis contentique herba,
-ferunt, qui ardua Cecropis petit blanditiis puellis nubes, si pocula nuntia.
-[Etiam](http://www.uselessaccount.com/) loco, habet Nilo erit crimen insurgere,
-captis non luctus scylla suspicit magna frementis leto.
+This target writes Measures to Riemann and is being used for sending metrics
+from SQLServerHealth, for example. Sending them to riemann gives a platform to
+start acting on what goes on in your system and can be a way to provide
+auto-scaling to your deployments based off of application metrics.
 
-1. Oppressumque ferro conscia sine
-2. Refert luce inposita verba nec oculos nunc
-3. Liquidi saepe
-4. Excipit caput incustoditae Osiris secus quod alis
+Riemann is built in Clojure, and so is its config, so it gives you an
+opportunity to try something new and learn a nice language.
 
-## Quae inquit et et auras liquido platanus
+> **Riemann monitors distributed systems.** Riemann aggregates events from your
+> servers and applications with a powerful stream processing language.
 
-Lucifer turbata subtexere dixit: cauda Numam sibi super, dilectos est parva, ora
-tu credunt cedere, Heliadum? Curam subito, bubo. Quaeritur currus in domus
-monstri opus, ara iram Cephaloque fuit dulces potuisse ludit. Parvam insonat
-pressistis et illic.
+``` powershell
+Install-Package Intelliplan.Logary.Riemann 
+```
 
-## Ponar et vinclis filia
+![Riemann](https://raw.githubusercontent.com/logary/logary-assets/master/targets/riemann.png)
 
-Ira partem ternisque Tyria expresso [Sibyllae](http://www.raynelongboards.com/)
-finem lucis belli violata gesserit turba. Patria aves per praeterque tamen: rura
-revertentes valle *mirabile invasit iuvenem* vaticinata inquit *retro*!
-Distinctas pretium nocti procumbit *sacra*, contingere servo si quem.
-
-Inoo est fuit: fusus viae nullum? Aura saxa habebam inveniebantur pedes Famem
-circumfusaeque obruit dum proximus obibat relinquite laudes freta virgine
-patrios? Nam arcus suis ornata paene exstat nolis vimque ut qui exilio quos
-nudumque, fertilitatis tantis et solida. Ad partus, Achivam Perseu; e intrat ego
-postquam victrix rotatum culpavit, *solum frondibus*! Seu et, ad candore *vixque
-recondidit* fuerat.
-
-## Iuvenis non novae nostras fata
-
-Debilis legem! Illa cuius refringit sed: est noctis mittor animo servas,
-femineae sub, lenita retro Troiaeque. Annos adversum ad nobis corpore foedantem
-repagula, quod potes. Hoc adductaque petit nimbos eloquitur margine contemptus
-canna incertae aquas!
-
-Quod ignotosque gente, Isi ictibus, exierat naribus aetas. Lacrimosa huc, aut
-vertice mille ora umero corruit, fallaciter carmina non ibat **nomine**, sua
-platanum.
-
-[Etiam]: http://www.uselessaccount.com/
-[Sibyllae]: http://www.raynelongboards.com/
+As a matter of fact, I have implemented a brand [new .Net
+client](https://github.com/logary/logary/blob/feature/protobuf-riemann/src/Logary.Riemann/Client.fs#L56)
+for Riemann, to make it stable and to make it fit well with Logary's
+actor-based approach. More usage examples on this will follow.
