@@ -37,6 +37,11 @@ business should log semantically and not just dump it all into a text file!
 
 ## Release Notes
 
+### v2.1
+
+ - FSharp.Core.3 -> FSharp.Core
+ - Bumped all nuget versions to latest
+
 ### v2.0.2
 
  - Support CommonLogging fully
