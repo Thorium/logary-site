@@ -6,7 +6,7 @@
 > correlation. See query results in seconds.
 
 ``` powershell
-Install-Package Logary.Logentries
+Install-Package Logary.Targets.Logentries
 ```
 
 All logging to Logentries is encrypted.

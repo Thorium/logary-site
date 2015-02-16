@@ -9,7 +9,7 @@ sorts of developers than .Net developers use, such as one of the other
 targets">.Net developer friendly indeed</span>.
 
 ``` powershell
-Install-Package Logary.ElmahIO
+Install-Package Logary.Targets.ElmahIO
 ```
 
 ![Elmah.IO](https://raw.githubusercontent.com/logary/logary-assets/master/targets/elmahio.png)

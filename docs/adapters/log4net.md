@@ -8,7 +8,7 @@ Well, you're in luck! Now there's a log4net appender that you can use to get
 access to all the niceties of Logary.
 
 ``` powershell
-Install-Package Logary.log4net
+Install-Package Logary.Adapters.log4net
 ```
 
 Now, add the adapter to your log4net configuration -- I recommend having the

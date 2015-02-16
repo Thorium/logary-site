@@ -13,7 +13,7 @@ server as Spans/traces.
 > updates.
 
 ``` powershell
-Install-Package Logary.Zipkin
+Install-Package Logary.Targets.Zipkin
 ```
 
 ![Zipkin](https://raw.githubusercontent.com/logary/logary-assets/master/targets/zipkin.png)
