@@ -36,6 +36,17 @@ about how
 business should log semantically and not just dump it all into a text file!
 
 ## Release Notes
+### v3.0
+
+ - Improved naming; 'Logary.Suave' -> 'Logary.Adapters.Suave' -- makes it easier
+   to find what you're after now that we have many adapters and targets.
+ - Moved some adapter types around (see Obsoletes) and made all adapters have
+   the same naming standard.
+
+### v2.6
+
+ - Fixed a filtering bug that meant you'd get more logs sent to your Targets
+   than you wanted.
 
 ### v2.1
 
