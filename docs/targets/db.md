@@ -9,7 +9,7 @@ The target also comes with **Logary.DB.Migrations** that set up the database
 state for both logs and metrics on boot, if not already existent.
 
 ``` powershell
-Install-Package Intelliplan.Logary.DB 
-Install-Package Intelliplan.Logary.DB.Migrations 
+Install-Package Logary.DB
+Install-Package Logary.DB.Migrations
 ```
 

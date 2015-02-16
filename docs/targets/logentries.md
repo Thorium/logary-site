@@ -6,7 +6,7 @@
 > correlation. See query results in seconds.
 
 ``` powershell
-Install-Package Intelliplan.Logary.Logentries 
+Install-Package Logary.Logentries
 ```
 
 All logging to Logentries is encrypted.

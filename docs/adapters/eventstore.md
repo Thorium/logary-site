@@ -6,7 +6,7 @@ call [LogManager.SetLogFactory][es-code] with it.
 First:
 
 ```
-Install-Package Intelliplan.Logary.Adapters.EventStore
+Install-Package Logary.Adapters.EventStore
 Install-Package EventStore.Client.FSharp
 ```
 

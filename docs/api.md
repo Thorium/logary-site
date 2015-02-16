@@ -80,7 +80,7 @@ an example of a Probe.
 This facade is useful when you're using C# 
 
 ``` powershell
-Install-Package Intelliplan.Logary.CSharp
+Install-Package Logary.CSharp
 ```
 
 It adds extension methods to the `Logary` namespace. Just import the namespace
@@ -99,7 +99,7 @@ using Logary.DB.Migrations;
 using Logary.Target;
 using Console = System.Console;
 
-namespace Intelliplan.Logary.Specs.Examples
+namespace Logary.Specs.Examples
 {
     public class When_using_fluent_API
     {

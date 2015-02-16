@@ -15,7 +15,7 @@ compiled with open source F# 3.0. [Logary is continously built on
 CentOS](https://tc-oss.intelliplan.net/project.html?projectId=Logary&tab=projectOverview).
 
 ``` powershell
-Install-Package Intelliplan.Logary
+Install-Package Logary
 ```
 
 ## Why?

@@ -11,7 +11,7 @@ LogLines and Measures.
 **Part of the core assembly:**
 
 ``` powershell
-Install-Package Intelliplan.Logary 
+Install-Package Logary
 ```
 
 ![Nimrod](https://raw.githubusercontent.com/logary/logary-assets/master/targets/nimrod.png)

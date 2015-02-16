@@ -9,7 +9,7 @@ a log router that can move your logs to the best location available.
 > collect, parse, index, and search logs
 
 ``` powershell
-Install-Package Intelliplan.Logary 
+Install-Package Logary
 ```
 
 ![Logstash](https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png)

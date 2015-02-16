@@ -7,7 +7,7 @@
 > analytics, notifications and more
 
 ``` powershell
-Install-Package Intelliplan.Logary.Loggr 
+Install-Package Logary.Loggr
 ```
 
 ![Loggr](https://raw.githubusercontent.com/logary/logary-assets/master/targets/loggr.png)

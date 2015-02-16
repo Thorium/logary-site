@@ -14,7 +14,7 @@ opportunity to try something new and learn a nice language.
 > servers and applications with a powerful stream processing language.
 
 ``` powershell
-Install-Package Intelliplan.Logary.Riemann 
+Install-Package Logary.Riemann
 ```
 
 ![Riemann](https://raw.githubusercontent.com/logary/logary-assets/master/targets/riemann.png)

@@ -19,7 +19,7 @@ Best used in conjunction with [Grafana](http://grafana.org/) (a web front-end):
 > a multitude of options.
 
 ``` powershell
-Install-Package Intelliplan.Logary 
+Install-Package Logary
 ```
 
 ![Grafana](https://raw.githubusercontent.com/logary/logary-assets/master/targets/grafana.png)
