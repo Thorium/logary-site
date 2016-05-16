@@ -1,4 +1,4 @@
-# Logary v2.0
+# Logary
 
 Logary is a high performance, multi-target logging, metric, tracing and
 health-check library for mono and .Net.
@@ -10,8 +10,8 @@ Chat and support and get support:
 
 [If you like the code, buy me a beer!](https://flattr.com/submit/auto?user_id=haf&url=https%3A%2F%2Fgithub.com%2Flogary%2Flogary)
 
-Logary v2.0 aims to be compatible with the latest Mono and .Net 4.0. It is
-compiled with open source F# 3.0. [Logary is continously built on
+Logary v4.0 aims to be compatible with the latest Mono and .Net 4.0. It is
+compiled with open source F# 4.0. [Logary is continously built on
 CentOS](https://tc-oss.intelliplan.net/project.html?projectId=Logary&tab=projectOverview).
 
 ``` powershell
@@ -36,6 +36,9 @@ about how
 business should log semantically and not just dump it all into a text file!
 
 ## Release Notes
+### v4.0
+ - Still Alpha...
+
 ### v3.0
 
  - Improved naming; 'Logary.Suave' -> 'Logary.Adapters.Suave' -- makes it easier

@@ -15,22 +15,22 @@ open Logary.Metrics
 [<EntryPoint>]
 let main argv =
   use logary =
-    withLogary' "Riemann.Example" (
+    withLogaryManager "Riemann.Example" (
       withTargets [
-        Riemann.create (Riemann.RiemannConf.Create(tags = ["riemann-health"])) "riemann"
-        Console.create Console.empty "console"
+        Riemann.create (Riemann.RiemannConf.create(tags = ["riemann-health"])) (PointName.ofSingle "riemann")
+        Console.create Console.empty (PointName.ofSingle "console")
       ] >>
       withMetrics (Duration.FromMilliseconds 5000L) [
-        WinPerfCounters.create (WinPerfCounters.Common.cpuTimeConf) "wperf" (Duration.FromMilliseconds 300L)
+        WinPerfCounters.create (WinPerfCounters.Common.cpuTimeConf) (PointName.ofSingle "wperf")(Duration.FromMilliseconds 300L)
       ] >>
       withRules [
-        Rule.createForTarget "riemann"
-        Rule.createForTarget "console"
+        Rule.createForTarget (PointName.ofSingle "riemann")
+        Rule.createForTarget (PointName.ofSingle "console")
       ] >>
       withInternalTargets Info [
-        Console.create (Console.empty) "console"
+        Console.create (Console.empty) (PointName.ofSingle "console")
       ]
-    )
+    ) |> Hopac.TopLevel.run
 
   Console.ReadKey true |> ignore
   0
@@ -43,6 +43,8 @@ Now you can get a logger through the `Logging` module:
 ``` fsharp
 let logger = Logging.getCurrentLogger ()
 let another = Logging.getLoggerByName "Corp.App.Svc"
+let writeLog x = Logary.Logger.log logger x |> Hopac.TopLevel.start
+Logary.Message.eventDebug "test" |> writeLog
 ```
 
 or in **C#**

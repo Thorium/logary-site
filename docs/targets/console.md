@@ -13,12 +13,12 @@ The console target is very simple to use and create:
 
 ``` fsharp
 use logary =
-  withLogary' "Console Example" (
+  withLogaryManager "Console Example" (
     withTargets [
-      Console.create (Console.ConsoleConf.Default) "console"
+      Console.create (Console.empty) (PointName.ofSingle "console")
     ] >>
     withRules [
-      Rule.forAny "console"
+      Rule.createForTarget (PointName.ofSingle "console")
     ])
 ```
 
